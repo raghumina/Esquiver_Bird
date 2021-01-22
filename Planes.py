@@ -23,6 +23,10 @@ BACKGROUND = "background.png"
 PIPE = "pipe.png"
 
 if __name__ == "__main__":
-    
+    # This is the main function from where the game will start
+    pygame.init()  # initiliaze pygame modules
+    FPSCLOCK = pygame.time.Clock()
+    pygame.display.set_caption("Esquiver_Plane ")
+    GAME_SPRITES[""]
 
 
