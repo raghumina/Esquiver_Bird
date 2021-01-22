@@ -27,6 +27,17 @@ if __name__ == "__main__":
     pygame.init()  # initiliaze pygame modules
     FPSCLOCK = pygame.time.Clock()
     pygame.display.set_caption("Esquiver_Plane ")
-    GAME_SPRITES[""]
+    GAME_SPRITES["numbers"] = (pygame.image.load("0.png").convert.alpha(),
+                               pygame.image.load("1.png").convert.alpha(),
+                               pygame.image.load("2.png").convert.alpha(),
+                            pygame.image.load("3.png").convert.alpha(),
+                               pygame.image.load("4.png").convert.alpha(),
+                               pygame.image.load("5.png").convert.alpha(),
+                               pygame.image.load("6.png").convert.alpha(),
+                               pygame.image.load("7.png").convert.alpha(),
+                               pygame.image.load("8.png").convert.alpha(),
+                               pygame.image.load("9.png").convert.alpha()
+                               )
+    
 
 
