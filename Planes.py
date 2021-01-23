@@ -1,4 +1,5 @@
 # Plane game inspired form falppy bird
+# The game is same as flappy bird, with slight changes.
 
 
 import random  # to generate random numbers/ creating random names in games
@@ -40,13 +41,15 @@ if __name__ == "__main__":
                                )
 GAME_SPRITES['message'] = pygame.image.load("message.png").convert_alpha()
 GAME_SPRITES['base'] = pygame.image.load("base.png").convert_alpha()
-GAME_SPRITES['pipe'] = (pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(),180),
+GAME_SPRITES['pipe'] = (pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(), 180),
                         pygame.image.load(PIPE).convert_alpha())
-
-
-
-
-
+# Code for Game Sounds
+#
+GAME_SOUNDS['die'] = pygame.mixer.Sound('die.wav')
+GAME_SOUNDS['hit'] = pygame.mixer.Sound('hit.wav')
+GAME_SOUNDS['point'] = pygame.mixer.Sound('point.wav')
+GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('swoosh.wav')
+GAME_SOUNDS['wing'] = pygame.mixer.Sound('wing.wav')
 
 
 
