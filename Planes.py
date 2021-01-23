@@ -5,8 +5,8 @@
 import random  # to generate random numbers/ creating random names in games
 import sys
 import pygame
-import pygame.locals
-from pygame import *
+from pygame.locals import *
+
 
 # Global variable for games
 FPS = 32  # FRAMES PER SECOND  FOR IMAGE REINDERSCREEN
@@ -22,6 +22,14 @@ GAME_SOUNDS = {}
 PLAYER = "bird.png"
 BACKGROUND = "background.png"
 PIPE = "pipe.png"
+
+def welcomeScreen():
+    # Shows welcome screen on image
+    # 
+
+
+
+
 
 if __name__ == "__main__":
     # This is the main function from where the game will start
@@ -54,6 +62,9 @@ GAME_SOUNDS['wing'] = pygame.mixer.Sound('wing.wav')
 GAME_SPRITES['Background'] = pygame.image.load(BACKGROUND).convert()
 GAME_SPRITES['PLAYER'] = pygame.image.load(PLAYER).convert_alpha()
 
+while True:
+    welcomeScreen()   # this will show game message until player clicks button
+    mainGame()   # this is main game function
 
 
 
