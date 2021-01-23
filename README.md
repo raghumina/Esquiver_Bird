@@ -4,5 +4,5 @@
 # Esuiver Bird Python Game using Pygame Module
 # Python Modules Used = Pygame, Random, Sys
 
-![game_screenshot](C:\Users\ashok\Pictures\Screenshots\Screenshot(159).png)
+![game_screenshot](C:/Users/ashok/Pictures/Screenshots/Screenshot(159).png)
 
