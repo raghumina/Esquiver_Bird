@@ -24,18 +24,30 @@ PIPE = "pipe.png"
 
 if __name__ == "__main__":
     # This is the main function from where the game will start
-    pygame.init()  # initiliaze pygame modules
+    pygame.init()  # initialize pygame modules
     FPSCLOCK = pygame.time.Clock()
     pygame.display.set_caption("Esquiver_Plane ")
-    GAME_SPRITES["numbers"] = (pygame.image.load("0.png").convert.alpha(),
-                               pygame.image.load("1.png").convert.alpha(),
-                               pygame.image.load("2.png").convert.alpha(),
-                               pygame.image.load("3.png").convert.alpha(),
-                               pygame.image.load("4.png").convert.alpha(),
-                               pygame.image.load("5.png").convert.alpha(),
-                               pygame.image.load("6.png").convert.alpha(),
-                               pygame.image.load("7.png").convert.alpha(),
-                               pygame.image.load("8.png").convert.alpha(),
-                               pygame.image.load("9.png").convert.alpha()
+    GAME_SPRITES["numbers"] = (pygame.image.load("0.png").convert_alpha(),
+                               pygame.image.load("1.png").convert_alpha(),
+                               pygame.image.load("2.png").convert_alpha(),
+                               pygame.image.load("3.png").convert_alpha(),
+                               pygame.image.load("4.png").convert_alpha(),
+                               pygame.image.load("5.png").convert_alpha(),
+                               pygame.image.load("6.png").convert_alpha(),
+                               pygame.image.load("7.png").convert_alpha(),
+                               pygame.image.load("8.png").convert_alpha(),
+                               pygame.image.load("9.png").convert_alpha()
                                )
-    
+GAME_SPRITES['message'] = pygame.image.load("message.png").convert_alpha()
+GAME_SPRITES['base'] = pygame.image.load("base.png").convert_alpha()
+GAME_SPRITES['pipe'] = (pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(),180),
+                        pygame.image.load(PIPE).convert_alpha())
+
+
+
+
+
+
+
+
+
