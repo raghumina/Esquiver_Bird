@@ -7,7 +7,6 @@ import sys
 import pygame
 from pygame.locals import *
 
-
 # Global variable for games
 FPS = 32  # FRAMES PER SECOND  FOR IMAGE REINDERSCREEN
 SCREENWIDTH = 1080
@@ -23,12 +22,16 @@ PLAYER = "bird.png"
 BACKGROUND = "background.png"
 PIPE = "pipe.png"
 
+
 def welcomeScreen():
     # Shows welcome screen on image
-    # 
+    # This for aliginig messages and player on screen
+    playerx = int(SCREENWIDTH / 5)  # creating the starting position of player on screen
+    palyery = int((SCREENHEIGHT - GAME_SPRITES['PLAYER'].get_height()) / 2)
+    mesasgex = int((SCREENWIDTH - GAME_SPRITES['PLAYER'].get_width()) / 2)
+    messagey = int(SCREENHEIGHT * 0.13['PLAYER'].get_height()) / 2
 
-
-
+    basex = 0
 
 
 if __name__ == "__main__":
@@ -63,12 +66,5 @@ GAME_SPRITES['Background'] = pygame.image.load(BACKGROUND).convert()
 GAME_SPRITES['PLAYER'] = pygame.image.load(PLAYER).convert_alpha()
 
 while True:
-    welcomeScreen()   # this will show game message until player clicks button
-    mainGame()   # this is main game function
-
-
-
-
-
-
-
+    welcomeScreen()  # this will show game message until player clicks button
+    mainGame()  # this is main game function
