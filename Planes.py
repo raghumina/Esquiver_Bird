@@ -9,14 +9,12 @@ from pygame.locals import *
 
 # Global variable for games
 FPS = 32  # FRAMES PER SECOND  FOR IMAGE REINDERSCREEN
-SCREENWIDTH = 1080
-SCREENHEIGHT = 720
-
+SCREENWIDTH = 289
+SCREENHEIGHT = 511
+SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 GROUNDY = SCREENHEIGHT * 0.8
-GAME_SPRITES = {
-
-}
+GAME_SPRITES = {}
 GAME_SOUNDS = {}
 PLAYER = "bird.png"
 BACKGROUND = "background.png"
@@ -29,7 +27,7 @@ def welcomeScreen():
     playerx = int(SCREENWIDTH / 5)  # creating the starting position of player on screen
     palyery = int((SCREENHEIGHT - GAME_SPRITES['PLAYER'].get_height()) / 2)
     mesasgex = int((SCREENWIDTH - GAME_SPRITES['PLAYER'].get_width()) / 2)
-    messagey = int(SCREENHEIGHT * 0.13['PLAYER'].get_height()) / 2
+    messagey = int((SCREENHEIGHT * 0.13))
 
     basex = 0
     while True:
@@ -41,8 +39,14 @@ def welcomeScreen():
 
         # If user presses space or up key start game for them
             elif event.type == KEYDOWN and (event.key == K_SPACE or K_UP ):
-                
-
+                return
+            else:
+                SCREEN.blit(GAME_SPRITES['Background'],(0,0))
+                SCREEN.blit(GAME_SPRITES['PLAYER'], (playerx,palyery))
+                SCREEN.blit(GAME_SPRITES['message'], (mesasgex, messagey))
+                SCREEN.blit(GAME_SPRITES['base'], (basex, GROUNDY))
+                pygame.display.update()
+                FPSCLOCK.tick(FPS)
 
 if __name__ == "__main__":
     # This is the main function from where the game will start
