@@ -15,7 +15,7 @@ GROUNDY = SCREENHEIGHT * 0.8
 GAME_SPRITES = {}
 GAME_SOUNDS = {}
 PLAYER = 'bird.png'
-BACKGROUND = 'background.png'
+BACKGROUND = 'bg.png'
 PIPE = 'pipe.png'
 
 
@@ -26,8 +26,8 @@ def welcomeScreen():
 
     playerx = int(SCREENWIDTH / 5)
     playery = int((SCREENHEIGHT - GAME_SPRITES['player'].get_height()) / 2)
-    messagex = int((SCREENWIDTH - GAME_SPRITES['message'].get_width()) / 2)
-    messagey = int(SCREENHEIGHT * 0.13)
+    #messagex = int((SCREENWIDTH - GAME_SPRITES['message'].get_width()) / 2)
+    #messagey = int(SCREENHEIGHT * 0.13)
     basex = 0
     while True:
         for event in pygame.event.get():
@@ -42,7 +42,7 @@ def welcomeScreen():
             else:
                 SCREEN.blit(GAME_SPRITES['background'], (0, 0))
                 SCREEN.blit(GAME_SPRITES['player'], (playerx, playery))
-                SCREEN.blit(GAME_SPRITES['message'], (messagex, messagey))
+              #  SCREEN.blit(GAME_SPRITES['message'], (messagex, messagey))
                 SCREEN.blit(GAME_SPRITES['base'], (basex, GROUNDY))
                 pygame.display.update()
                 FPSCLOCK.tick(FPS)
@@ -189,7 +189,7 @@ if __name__ == "__main__":
     # This will be the main point from where our game will start
     pygame.init()  # Initialize all pygame's modules
     FPSCLOCK = pygame.time.Clock()
-    pygame.display.set_caption('Flappy Bird by Raghu')
+    pygame.display.set_caption('Esquiver Bird')
     GAME_SPRITES['numbers'] = (
         pygame.image.load('0.png').convert_alpha(),
         pygame.image.load('1.png').convert_alpha(),
@@ -203,7 +203,7 @@ if __name__ == "__main__":
         pygame.image.load('9.png').convert_alpha(),
     )
 
-    GAME_SPRITES['message'] = pygame.image.load('message.png').convert_alpha()
+    #GAME_SPRITES['message'] = pygame.image.load('message.png').convert_alpha()
     GAME_SPRITES['base'] = pygame.image.load('base.png').convert_alpha()
     GAME_SPRITES['pipe'] = (pygame.transform.rotate(pygame.image.load(PIPE).convert_alpha(), 180),
                             pygame.image.load(PIPE).convert_alpha()
