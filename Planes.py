@@ -32,6 +32,16 @@ def welcomeScreen():
     messagey = int(SCREENHEIGHT * 0.13['PLAYER'].get_height()) / 2
 
     basex = 0
+    while True:
+        for event in pygame.event.get():
+            # If user click on cross button close the game
+            if event.type == QUIT or (event.type==KEYDOWN and event.key == K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+
+        # If user presses space or up key start game for them
+            elif event.type == KEYDOWN and (event.key == K_SPACE or K_UP ):
+                
 
 
 if __name__ == "__main__":
