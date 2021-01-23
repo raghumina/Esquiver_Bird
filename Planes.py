@@ -10,8 +10,8 @@ from pygame import *
 
 # Global variable for games
 FPS = 32  # FRAMES PER SECOND  FOR IMAGE REINDERSCREEN
-SCREENWIDTH = 289
-SCREENHEIGHT = 511
+SCREENWIDTH = 1080
+SCREENHEIGHT = 720
 
 pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
 GROUNDY = SCREENHEIGHT * 0.8
@@ -50,6 +50,13 @@ GAME_SOUNDS['hit'] = pygame.mixer.Sound('hit.wav')
 GAME_SOUNDS['point'] = pygame.mixer.Sound('point.wav')
 GAME_SOUNDS['swoosh'] = pygame.mixer.Sound('swoosh.wav')
 GAME_SOUNDS['wing'] = pygame.mixer.Sound('wing.wav')
+
+GAME_SPRITES['Background'] = pygame.image.load(BACKGROUND).convert()
+GAME_SPRITES['PLAYER'] = pygame.image.load(PLAYER).convert_alpha()
+
+
+
+
 
 
 
