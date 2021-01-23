@@ -215,5 +215,8 @@ def mainGame():
         GAME_SPRITES['background'] = pygame.image.load(BACKGROUND).convert()
         GAME_SPRITES['player'] = pygame.image.load(PLAYER).convert_alpha()
 
+        while True:
+            welcomeScreen()  # Shows welcome screen to the user until he presses a button
+            mainGame()  # This is the main game function 
 
 
